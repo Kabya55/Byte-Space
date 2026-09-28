@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ByteSpace - Next Generation E-Learning Platform
 
-## Getting Started
+![ByteSpace Banner](public/Logo_Partner.png)
 
-First, run the development server:
+ByteSpace is a modern, high-performance e-learning platform built with **Next.js 15 (App Router)**, **React 19**, and **Tailwind CSS**. It provides an engaging experience for discovering courses, tracking learning progress, and interacting with content creators.
+
+---
+
+## 🚀 Features
+
+- **🎨 Modern Aesthetic Design**: Pixel-perfect UI with curated color palettes (`#0044FF` cobalt blue, `#D4FF00` electric lime), glassmorphic elements, and smooth micro-interactions.
+- **🔍 Advanced Course Discovery & Search**:
+  - Live real-time search by keyword, creator, and topic.
+  - Multi-category pill filters (Featured, UI/UX, Development, Marketing, Music, etc.).
+  - Sort by relevance, highest rating, price, and popularity.
+  - Paginated course catalog.
+- **📚 Interactive Course Details**:
+  - Video preview with seamless blue backdrop wrapper.
+  - Floating sticky action card with pricing, enroll button, and course specs.
+  - Tabbed interface for **About**, **Lessons/Modules**, and **Reviews Breakdown**.
+- **👨‍🏫 Creator Profiles**:
+  - Dedicated creator page with bio, stats, followers counter, and creator course catalog.
+- **🔐 Secure Authentication**:
+  - Clean **Sign In** and **Join Us** pages with interactive password visibility toggles and social login options.
+  - Conditional navigation (Navbar/Footer automatically hidden on auth routes).
+- **📱 Fully Responsive**: Optimized for Mobile, Tablet (`md` 6-column grid), and Desktop displays.
+- **⚡ SEO & Metadata**: Dynamic OpenGraph tags, page titles, and branded favicon support.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: JavaScript (React 19)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: Heroicons, Lucide React
+- **Fonts**: Geist Sans & Geist Mono
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js (v18.17 or higher)
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Kabya55/Byte-Space.git
+
+# Navigate to project directory
+cd Byte-Space
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+```text
+byte-space/
+├── public/                # Static assets, brand logos, icons
+│   ├── icon/              # Category icons (Design, Development, etc.)
+│   └── login-icon/        # Auth and card illustrations
+├── src/
+│   ├── app/               # Next.js App Router pages
+│   │   ├── courses/       # Course catalog & dynamic details [id]
+│   │   ├── creators/      # Creator profile page
+│   │   ├── signin/        # Sign In page
+│   │   ├── joinUs/        # Registration page
+│   │   ├── search/        # Search route
+│   │   ├── layout.js      # Root layout & global metadata
+│   │   └── page.js        # Homepage
+│   ├── component/         # Reusable UI components
+│   │   ├── Banner.jsx
+│   │   ├── CourseCard.jsx
+│   │   ├── DiscoverCourses.jsx
+│   │   ├── LearningPaths.jsx
+│   │   ├── FeaturesSection.jsx
+│   │   ├── TestimonialSection.jsx
+│   │   ├── NavBar.jsx
+│   │   └── Footer.jsx
+│   └── data/              # Centralized mock data
+└── package.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
