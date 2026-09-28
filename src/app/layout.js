@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://byte-space-beryl.vercel.app"),
   title: {
     default: "ByteSpace",
     template: "%s | ByteSpace",
