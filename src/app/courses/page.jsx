@@ -212,7 +212,7 @@ function CoursesSearchContent() {
           {/* Search Row: Separated Input and Courses Button */}
           <div className="w-full max-w-2xl flex items-center justify-center gap-3 sm:gap-4">
             {/* 1. Standalone White Search Input Box */}
-            <div className="flex-1 flex items-center bg-white rounded-full px-5 sm:px-6 h-13 sm:h-14 shadow-2xl">
+            <div className="flex-1 flex items-center bg-white rounded-full px-5 sm:px-6 h-14 min-h-[56px] shadow-2xl">
               <svg
                 className="w-5 h-5 text-gray-400 mr-3 shrink-0"
                 fill="none"
@@ -252,7 +252,7 @@ function CoursesSearchContent() {
               <button
                 type="button"
                 onClick={() => setIsCourseTypeOpen((prev) => !prev)}
-                className="bg-[#D4FF00] hover:bg-[#c2ea00] active:scale-95 text-black font-semibold text-sm sm:text-base px-7 sm:px-8 h-13 sm:h-14 rounded-full flex items-center gap-2 transition-all shadow-2xl cursor-pointer"
+                className="bg-[#D4FF00] hover:bg-[#c2ea00] active:scale-95 text-black font-semibold text-sm sm:text-base px-7 sm:px-8 h-14 min-h-[56px] rounded-full flex items-center gap-2 transition-all shadow-2xl cursor-pointer"
               >
                 <span>{courseType}</span>
                 <svg

@@ -99,8 +99,8 @@ const Banner = () => {
               className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 w-full"
             >
               {/* Input Field (White Box) */}
-              <div className="flex flex-1 items-center w-full bg-white rounded-full px-5 sm:px-6 h-14 shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[#D4FF00]">
-                <div className="pr-3 text-gray-400">
+              <div className="flex items-center w-full md:flex-1 bg-white rounded-full px-5 sm:px-6 h-14 min-h-[56px] shrink-0 shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[#D4FF00]">
+                <div className="pr-3 text-gray-400 shrink-0">
                   {/* Search Icon */}
                   <svg
                     className="w-5 h-5"
@@ -127,7 +127,7 @@ const Banner = () => {
                     if (query.trim()) setIsOpen(true);
                   }}
                   placeholder="Course, topic, creator"
-                  className="flex-1 bg-transparent outline-none text-black text-sm md:text-base font-medium placeholder-gray-400"
+                  className="flex-1 w-full h-full bg-transparent outline-none text-black text-sm md:text-base font-medium placeholder-gray-400 py-3"
                 />
                 {query && (
                   <button
@@ -136,7 +136,7 @@ const Banner = () => {
                       setQuery("");
                       setIsOpen(false);
                     }}
-                    className="text-gray-400 hover:text-gray-600 text-xs px-2 cursor-pointer"
+                    className="text-gray-400 hover:text-gray-600 text-xs px-2 cursor-pointer shrink-0"
                   >
                     ✕
                   </button>
@@ -146,7 +146,7 @@ const Banner = () => {
               {/* Standalone Search Button */}
               <button
                 type="submit"
-                className="bg-[#D4FF00] text-black font-bold px-10 h-14 w-full md:w-auto rounded-full shadow-2xl hover:bg-[#c2ea00] active:scale-95 transition-all duration-200 cursor-pointer flex items-center justify-center text-sm md:text-base"
+                className="bg-[#D4FF00] text-black font-bold px-10 h-14 min-h-[56px] shrink-0 w-full md:w-auto rounded-full shadow-2xl hover:bg-[#c2ea00] active:scale-95 transition-all duration-200 cursor-pointer flex items-center justify-center text-sm md:text-base"
               >
                 Search
               </button>
