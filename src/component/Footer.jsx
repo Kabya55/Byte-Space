@@ -171,7 +171,7 @@ export default function Footer() {
 
         {/* Bottom Section - Copyright & Legal */}
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500">
-          <p>@ 2023 ByteSpace. All rights reserved.</p>
+          <p>@ 2023 Kabya. All rights reserved.</p>
           <div className="flex gap-6">
             <Link
               href="#"
