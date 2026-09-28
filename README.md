@@ -63,7 +63,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-Open [http://localhost:3000](https://byte-space-beryl.vercel.app) in your browser to see the application.
+Open [https://byte-space-beryl.vercel.app](https://byte-space-beryl.vercel.app) in your browser to see the application.
 
 ---
 
