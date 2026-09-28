@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import React, { useState, useMemo, useEffect, useRef, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import CourseCard from "@/component/CourseCard";
 import { coursesData } from "@/data/coursesData";
 
-export default function CoursesSearchPage() {
+function CoursesSearchContent() {
+  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Featured");
   const [selectedLevel, setSelectedLevel] = useState("All"); // All | Beginner | Intermediate | Advanced
@@ -12,6 +14,20 @@ export default function CoursesSearchPage() {
   const [sortBy, setSortBy] = useState("relevant"); // relevant | rating | price-asc | price-desc | popular
   const [priceFilter, setPriceFilter] = useState("all"); // all | under25 | 25to35 | above35
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Sync state from URL query parameters (e.g. from homepage banner search)
+  useEffect(() => {
+    const q = searchParams.get("q") || searchParams.get("search");
+    if (q) {
+      setSearchQuery(q);
+      setCurrentPage(1);
+    }
+    const cat = searchParams.get("category");
+    if (cat) {
+      setSelectedCategory(cat);
+      setCurrentPage(1);
+    }
+  }, [searchParams]);
 
   // Dropdown open states
   const [isCourseTypeOpen, setIsCourseTypeOpen] = useState(false);
@@ -634,5 +650,19 @@ export default function CoursesSearchPage() {
         )}
       </section>
     </div>
+  );
+}
+
+export default function CoursesSearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="w-full bg-[#FAFAFA] min-h-screen flex items-center justify-center">
+          <div className="w-8 h-8 border-4 border-[#0044FF] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <CoursesSearchContent />
+    </Suspense>
   );
 }

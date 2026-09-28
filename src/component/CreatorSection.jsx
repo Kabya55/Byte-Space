@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 const CreatorSection = () => {
   return (
@@ -48,12 +49,14 @@ const CreatorSection = () => {
         </p>
 
         {/* CTA Button */}
-        <Button
-          radius="full"
-          className="bg-[#D4FF00] text-black font-semibold px-8 py-6 text-sm md:text-base shadow-xl hover:opacity-90 transition-opacity"
-        >
-          Join as Creator
-        </Button>
+        <Link href="/joinUs">
+          <Button
+            radius="full"
+            className="bg-[#D4FF00] text-black font-semibold px-8 py-6 text-sm md:text-base shadow-xl hover:opacity-90 transition-opacity"
+          >
+            Join as Creator
+          </Button>
+        </Link>
       </div>
     </div>
   );
